@@ -1,0 +1,16 @@
+{
+    "name": "deferdie/exception-logger-client",
+    "description": "The clients of the ExceptionLogger deferdie ExceptionLogger",
+    "type": "laravel",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ferdie De Oliveira",
+            "email": "deferdie@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
