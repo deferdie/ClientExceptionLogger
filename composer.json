@@ -1,5 +1,5 @@
 {
-    "name": "deferdie/client-exception-logger",
+    "name": "deferdie/ExceptionLogger",
     "description": "The clients of the ExceptionLogger deferdie ExceptionLogger",
     "type": "laravel",
     "require": {
