@@ -1,6 +1,6 @@
 <?php
 
-namespace deferdie\ExceptionLogger\Facades;
+namespace ExceptionLogger\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

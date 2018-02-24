@@ -1,6 +1,6 @@
 <?php
 
-namespace deferdie\ExceptionLogger;
+namespace ExceptionLogger;
 
 use GuzzleHttp\Client;
 
