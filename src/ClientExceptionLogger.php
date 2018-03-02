@@ -64,7 +64,7 @@ class ClientExceptionLogger
 			    ],
 
 			    'form_params' => [
-			        'event_content' => json_encode($this->event),
+			        'event_content' => json_encode($item),
 			    ],
 		]);
 	}
