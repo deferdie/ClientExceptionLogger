@@ -42,7 +42,22 @@ class ClientExceptionLogger
 
 	public function dispatch()
 	{
-		$this->client->request('POST', 'http://exceptionlogger.test/api/log', [
+		$item = [
+			'status_code' => $this->event->getCode(),
+			'url' => $_SERVER['HTTP_HOST'] . $_SERVER["REQUEST_URI"],
+			'message' => $this->event->getMessage(),
+			'header' => $_SERVER['HTTP_USER_AGENT'],
+			'body' => json_encode($this->event->getTrace()),
+			'file' => $this->event->getFile(),
+			'lineNumber' => $this->event->getLine(),
+			'request_uri' => request()->getRequestUri(),
+			'server_name' => request()->server('SERVER_NAME'),
+			'enviroment' => env('APP_ENV'),
+			'project_id' => env('EXCEPTION_LOGGER_PROJECT_ID'),
+		];
+
+
+		$this->client->request('POST', env('EXCEPTION_LOGGER').'/api/log', [
 			    'headers' => [
 			        'Accept' => 'application/test',
 			        'Authorization' => 'Bearer '.$this->accessToken,
