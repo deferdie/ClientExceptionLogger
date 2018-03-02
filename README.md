@@ -10,6 +10,6 @@ ExceptionLogger\ClientExceptionLoggerServiceProvider::class,
 'ClientException' => ExceptionLogger\Facades\ClientExceptionLoggerFacade::class,
 
 ### Add to .env file
-EXCEPTION_LOGGER=http://exceptionlogger.test
-EXCEPTION_LOGGER_CLIENT_ID=1
-EXCEPTION_LOGGER_CLIENT_SECRET=[your application secret]
+EXCEPTION_LOGGER=http://exceptionlogger.test <br>
+EXCEPTION_LOGGER_CLIENT_ID=1 <br>
+EXCEPTION_LOGGER_CLIENT_SECRET=[your application secret] <br>
