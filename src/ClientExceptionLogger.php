@@ -42,7 +42,7 @@ class ClientExceptionLogger
 
 	public function dispatch()
 	{
-		$status = (get_class($this->event) === 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException') ? $exception->getStatusCode() : $this->event->getCode();
+		$status = (get_class($this->event) === 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException') ? $this->event->getStatusCode() : $this->event->getCode();
 		
 		$item = [
 			'status_code' => $status,
