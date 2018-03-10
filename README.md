@@ -9,6 +9,12 @@ ExceptionLogger\ClientExceptionLoggerServiceProvider::class,
 #### Register alias
 'ClientException' => ExceptionLogger\Facades\ClientExceptionLoggerFacade::class,
 
+#### Add to Handler.php
+use Exception;
+
+ClientException::log($exception);
+
+
 ### Add to .env file
 EXCEPTION_LOGGER=http://exceptionlogger.test <br>
 EXCEPTION_LOGGER_CLIENT_ID=1 <br>
